@@ -3,27 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Que vas a comer?</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
-  <body>
+
+  <body class="light-mode">
+    <header class="text-center">
+      <h1>Healthy Eating App</h1>
+    </header>
+
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
+      <img src="src/assets/img/Food.png" style="width: 300px; height: auto;" />
+      <p id="foodMessage" class="alert mt-4">
+        veamos si puedes comer un alimento
       </p>
-      <div class="fixed-bottom p-4">
+
+      <!-- Input para ingresar el alimento -->
+      <div class="mt-4">
+        <input
+          list="foodOptions"
+          id="foodInput"
+          placeholder="ingrese su alimento"
+        />
+        <datalist id="foodOptions">
+          <option value="manzana"></option>
+          <option value="naranja"></option>
+          <option value="banana"></option>
+          <option value="queso"></option>
+          <option value="pan"></option>
+        </datalist>
+
+        <button id="checkFoodButton" class="btn btn-primary mt-2">
+          Veamos!
+        </button>
+      </div>
+
+      <!-- Historial de alimentos -->
+      <ul id="foodHistory" class="list-group mt-4"></ul>
+
+      <!-- Botón para limpiar historial -->
+      <button id="clearHistoryButton" class="btn btn-danger mt-4">
+        Limpiar Historial
+      </button>
+
+      <!-- Botón para cambiar tema -->
+      <button id="themeToggle" class="btn btn-secondary mt-4">
+        Cambiar Tema
+      </button>
+    </div>
+
+    <footer class="text-center">
+      <p>
         Made with ❤️ by
         <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
+      </p>
+    </footer>
   </body>
 </html>

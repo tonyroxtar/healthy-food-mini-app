@@ -1,1 +1,121 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Estilo para el header */
+header {
+  background-color: #28a745; /* Color verde */
+  color: white;
+  padding: 15px 0; /* Espaciado interno */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #f9f9f9; /* Color claro */
+  color: #333;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Añadir espacio en el body para no solapar el contenido */
+body {
+  padding-top: 70px; /* Altura del header */
+  padding-bottom: 70px; /* Altura del footer */
+  font-family: "Roboto", sans-serif; /* Tipografía */
+  background-color: #f0f8f5; /* Fondo suave */
+  color: #333; /* Texto oscuro */
+}
+
+/* Botones con efecto de hover */
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838; /* Cambiar color al pasar el mouse */
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño en hover */
+}
+
+/* Estilos para las alertas */
+.alert-success {
+  background-color: #d4edda; /* Verde suave */
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da; /* Rojo claro */
+  color: #721c24;
+}
+
+/* Estilo para las tarjetas en el historial */
+.card {
+  margin-bottom: 10px; /* Espaciado entre las tarjetas */
+  transition: box-shadow 0.3s ease; /* Efecto suave de sombra */
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+}
+
+#foodHistory {
+  max-height: 200px;
+  overflow-y: auto; /* Hacer scrolleable el historial */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  img {
+    width: 100%; /* Imagen se ajusta al ancho de la pantalla en móviles */
+    height: auto;
+  }
+
+  #foodHistory {
+    width: 100%; /* Historial se ajusta al ancho completo en móviles */
+  }
+}
+
+/* Modo claro (default) */
+body.light-mode {
+  background-color: #f0f8f5; /* Fondo suave */
+  color: #333; /* Texto oscuro */
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto claro */
+}
+
+/* Ajustes para los botones en modo oscuro */
+body.dark-mode .btn {
+  background-color: #555; /* Color para los botones en modo oscuro */
+  color: white;
+}
+
+body.dark-mode header {
+  background-color: rgb(18, 76, 18);
+}
+body.dark-mode footer {
+  background-color: #464545; /* Color para el header y footer en modo oscuro */
+}
+
+/* Estilo para el modo oscuro */
+body.dark-mode .card {
+  background-color: #444; /* Fondo más oscuro para las tarjetas */
+  color: white; /* Asegura que el texto sea blanco en modo oscuro */
+  border: 1px solid #555; /* Borde visible en modo oscuro */
+}
+
+body.dark-mode .card-text {
+  color: white; /* Color del texto dentro de las tarjetas en modo oscuro */
+}
